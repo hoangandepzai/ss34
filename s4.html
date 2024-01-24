@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay Đổi Style</title>
+    <style>
+        /* Thêm một số CSS để trang trí giao diện */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        #outputText {
+            font-size: 18px;
+            color: black; /* Màu chữ mặc định */
+        }
+
+        .highlight {
+            color: red; /* Màu chữ khi được thay đổi style */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Thêm một nút và một dòng chữ -->
+<button id="changeStyleButton">Thay Đổi Style</button>
+<p id="outputText">Chào mừng bạn đến với trang web!</p>
+
+<script>
+    // Sử dụng JavaScript để xử lý sự kiện khi nút được nhấn
+    document.getElementById('changeStyleButton').addEventListener('click', function() {
+        // Lấy đối tượng dòng chữ
+        var outputElement = document.getElementById('outputText');
+
+        // Thêm hoặc xóa class 'highlight' để thay đổi style
+        if (outputElement.classList.contains('highlight')) {
+            outputElement.classList.remove('highlight');
+        } else {
+            outputElement.classList.add('highlight');
+        }
+    });
+</script>
+
+</body>
+</html>

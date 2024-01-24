@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách</title>
+</head>
+<body>
+
+<!-- Thẻ ngoại trừ để nhúng JavaScript -->
+<script>
+
+    // Khai báo mảng sử dụng biến let
+    let danhSach = ["Mục 1", "Mục 2", "Mục 3", "Mục 4", "Mục 5"];
+
+    // Hàm để hiển thị danh sách
+    function hienThiDanhSach() {
+        // Tạo một danh sách không có dấu chấm
+        let ul = document.createElement("ul");
+
+        // Duyệt qua mảng và thêm mỗi mục vào danh sách
+        for (let i = 0; i < danhSach.length; i++) {
+            let li = document.createElement("li");
+            li.appendChild(document.createTextNode(danhSach[i]));
+            ul.appendChild(li);
+        }
+
+        // Thêm danh sách vào body của trang
+        document.body.appendChild(ul);
+    }
+
+    // Gọi hàm hiển thị danh sách khi trang được tải
+    window.onload = hienThiDanhSach;
+
+</script>
+
+</body>
+</html>

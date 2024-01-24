@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin chào</title>
+    <style>
+        /* Thêm một số CSS để trang trí giao diện */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Thêm một nút và sử dụng JavaScript để hiển thị thông báo -->
+<button id="btnHello">Nhấn vào đây</button>
+
+<script>
+    // Sử dụng JavaScript để xử lý sự kiện khi nút được nhấn
+    document.getElementById('btnHello').addEventListener('click', function() {
+        // Hiển thị thông báo xin chào khi nút được nhấn
+        alert('Xin chào!'); // Bạn có thể thay thế alert bằng các phương thức hiển thị thông báo khác
+    });
+</script>
+
+</body>
+</html>

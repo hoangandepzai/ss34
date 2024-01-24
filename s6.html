@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm vào Danh Sách</title>
+    <style>
+        /* Thêm một số CSS để trang trí giao diện */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Thêm một ô input và một nút -->
+<input type="text" id="inputValue" placeholder="Nhập giá trị">
+<button id="addButton">Thêm vào Danh Sách</button>
+
+<!-- Danh sách để hiển thị giá trị -->
+<ul id="resultList"></ul>
+
+<script>
+    // Sử dụng JavaScript để xử lý sự kiện khi nút được nhấn
+    document.getElementById('addButton').addEventListener('click', function() {
+        // Lấy giá trị từ ô input
+        var inputValue = document.getElementById('inputValue').value;
+
+        // Kiểm tra nếu giá trị không trống
+        if (inputValue.trim() !== '') {
+            // Tạo một phần tử li mới và thêm vào danh sách
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(inputValue));
+
+            // Thêm li vào danh sách
+            document.getElementById('resultList').appendChild(li);
+
+            // Xóa nội dung của ô input
+            document.getElementById('inputValue').value = '';
+        }
+    });
+</script>
+
+</body>
+</html>
